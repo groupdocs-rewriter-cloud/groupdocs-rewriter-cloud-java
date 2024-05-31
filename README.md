@@ -50,6 +50,7 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/rewriter/supported
 - **sk** — to process Slovak text or document
 - **pt** — to process Portuguese text or document
 - **it** — to process Italian text or document
+- **hi** — to process Hindi text or document
 
 ## How to use the SDK?
 
@@ -85,7 +86,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.groupdocs</groupId>
   <artifactId>GroupDocs-rewriter-cloud</artifactId>
-  <version>24.4</version>
+  <version>24.5</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -101,7 +102,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-rewriter-cloud:24.4"
+     implementation "com.groupdocs:GroupDocs-rewriter-cloud:24.5"
   }
 ```
 
@@ -115,7 +116,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-rewriter-cloud-24.4.jar`
+* `target/GroupDocs-rewriter-cloud-24.5.jar`
 * `target/lib/*.jar`
 
 ## Quickstart
@@ -274,7 +275,7 @@ Class | Method | HTTP request | Description
 | .NET | Python | Java
 |---|---|---|
 | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-dotnet) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-dotnet) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java)
-| [NuGet](https://www.nuget.org/packages/GroupDocs.Rewriter-Cloud/) | [PyPi](https://pypi.org/project/groupdocs-rewriter-cloud/) | [Maven](https://releases.groupdocs.cloud/java/repo/com/groupdocs/groupdocs-rewriter-cloud/)
+| [NuGet](https://www.nuget.org/packages/GroupDocs.Rewriter-Cloud/) | [PyPi](https://pypi.org/project/groupdocs-rewriter-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-rewriter-cloud)
 
 ---
 
