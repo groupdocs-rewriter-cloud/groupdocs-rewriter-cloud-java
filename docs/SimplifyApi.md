@@ -8,6 +8,7 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/rewriter*
 | [**simplifyDocumentRequestIdGet**](SimplifyApi.md#simplifyDocumentRequestIdGet) | **GET** /simplify/document/{requestId} | Return document simplifying status.  Also return URLs for downloading of simplified document if paraphrasig was successful |
 | [**simplifyDocumentTrialPost**](SimplifyApi.md#simplifyDocumentTrialPost) | **POST** /simplify/document/trial | Trial simplify document |
 | [**simplifyHcGet**](SimplifyApi.md#simplifyHcGet) | **GET** /simplify/hc | Health check for all simplify services. |
+| [**simplifyOcrPost**](SimplifyApi.md#simplifyOcrPost) | **POST** /simplify/ocr | Simplify scanned image or document |
 | [**simplifySupportedConversionsGet**](SimplifyApi.md#simplifySupportedConversionsGet) | **GET** /simplify/supportedConversions |  |
 | [**simplifyTextPost**](SimplifyApi.md#simplifyTextPost) | **POST** /simplify/text | Simplify text |
 | [**simplifyTextRequestIdGet**](SimplifyApi.md#simplifyTextRequestIdGet) | **GET** /simplify/text/{requestId} | Return text simplifying status.  Also return simplified text if paraphrasing was successful |
@@ -26,6 +27,7 @@ Simplify document
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -33,6 +35,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     SimplifyFileRequest simplifyFileRequest = new SimplifyFileRequest(); // SimplifyFileRequest | String in body of request, containing JSON with parameters for simplifying.
@@ -62,7 +68,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -86,6 +92,7 @@ Return document simplifying status.  Also return URLs for downloading of simplif
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -93,6 +100,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     String requestId = "requestId_example"; // String | GUID which got from /v3/rewriter/document response
@@ -122,7 +133,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -146,6 +157,7 @@ Trial simplify document
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -153,6 +165,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     SimplifyTrialFileRequest simplifyTrialFileRequest = new SimplifyTrialFileRequest(); // SimplifyTrialFileRequest | String in body of request, containing JSON with parameters for simplifying.
@@ -182,7 +198,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -206,6 +222,7 @@ Health check for all simplify services.
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -213,6 +230,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     try {
@@ -238,11 +259,76 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="simplifyOcrPost"></a>
+# **simplifyOcrPost**
+> StatusResponse simplifyOcrPost(simplifyOcrRequest)
+
+Simplify scanned image or document
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.SimplifyApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    SimplifyApi apiInstance = new SimplifyApi(defaultClient);
+    SimplifyOcrRequest simplifyOcrRequest = new SimplifyOcrRequest(); // SimplifyOcrRequest | String in body of request, containing JSON with parameters for simplifying.
+    try {
+      StatusResponse result = apiInstance.simplifyOcrPost(simplifyOcrRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SimplifyApi#simplifyOcrPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **simplifyOcrRequest** | [**SimplifyOcrRequest**](SimplifyOcrRequest.md)| String in body of request, containing JSON with parameters for simplifying. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
@@ -262,6 +348,7 @@ No authorization required
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -269,6 +356,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     String format = "Unknown"; // String | 
@@ -298,7 +389,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -322,6 +413,7 @@ Simplify text
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -329,6 +421,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     BaseTextRequest baseTextRequest = new BaseTextRequest(); // BaseTextRequest | String in body of request, containing JSON with parameters for simplifying.
@@ -358,7 +454,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -382,6 +478,7 @@ Return text simplifying status.  Also return simplified text if paraphrasing was
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -389,6 +486,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     String requestId = "requestId_example"; // String | GUID which got from /v3/rewriter/text response
@@ -418,7 +519,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -442,6 +543,7 @@ Trial simplify text
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SimplifyApi;
 
@@ -449,6 +551,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SimplifyApi apiInstance = new SimplifyApi(defaultClient);
     BaseTextRequest baseTextRequest = new BaseTextRequest(); // BaseTextRequest | String in body of request, containing JSON with parameters for simplifying. Maximum 1000 characters
@@ -478,7 +584,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 

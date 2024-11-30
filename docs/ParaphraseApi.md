@@ -8,6 +8,7 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/rewriter*
 | [**paraphraseDocumentRequestIdGet**](ParaphraseApi.md#paraphraseDocumentRequestIdGet) | **GET** /paraphrase/document/{requestId} | Return document rewriting status.  Also return URLs for downloading of rewritten document if paraphrasig was successful |
 | [**paraphraseDocumentTrialPost**](ParaphraseApi.md#paraphraseDocumentTrialPost) | **POST** /paraphrase/document/trial | Trial paraphrase document |
 | [**paraphraseHcGet**](ParaphraseApi.md#paraphraseHcGet) | **GET** /paraphrase/hc | Health check for all paraphrase services. |
+| [**paraphraseOcrPost**](ParaphraseApi.md#paraphraseOcrPost) | **POST** /paraphrase/ocr | Rewrite scanned image or PDF |
 | [**paraphraseSupportedConversionsGet**](ParaphraseApi.md#paraphraseSupportedConversionsGet) | **GET** /paraphrase/supportedConversions |  |
 | [**paraphraseTextPost**](ParaphraseApi.md#paraphraseTextPost) | **POST** /paraphrase/text | Rewrite text |
 | [**paraphraseTextRequestIdGet**](ParaphraseApi.md#paraphraseTextRequestIdGet) | **GET** /paraphrase/text/{requestId} | Return text rewriting status.  Also return rewritten text if paraphrasing was successful |
@@ -26,6 +27,7 @@ Paraphrase document
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -33,6 +35,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     ParaphraseFileRequest paraphraseFileRequest = new ParaphraseFileRequest(); // ParaphraseFileRequest | String in body of request, containing JSON with parameters for rewriting.
@@ -62,7 +68,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -86,6 +92,7 @@ Return document rewriting status.  Also return URLs for downloading of rewritten
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -93,6 +100,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     String requestId = "requestId_example"; // String | GUID which got from /v3/rewriter/document response
@@ -122,7 +133,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -146,6 +157,7 @@ Trial paraphrase document
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -153,6 +165,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     ParaphraseTrialFileRequest paraphraseTrialFileRequest = new ParaphraseTrialFileRequest(); // ParaphraseTrialFileRequest | String in body of request, containing JSON with parameters for rewriting.
@@ -182,7 +198,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -206,6 +222,7 @@ Health check for all paraphrase services.
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -213,6 +230,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     try {
@@ -238,11 +259,76 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="paraphraseOcrPost"></a>
+# **paraphraseOcrPost**
+> StatusResponse paraphraseOcrPost(paraphraseOcrRequest)
+
+Rewrite scanned image or PDF
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.ParaphraseApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
+    ParaphraseOcrRequest paraphraseOcrRequest = new ParaphraseOcrRequest(); // ParaphraseOcrRequest | String in body of request, containing JSON with parameters for rewriting.
+    try {
+      StatusResponse result = apiInstance.paraphraseOcrPost(paraphraseOcrRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ParaphraseApi#paraphraseOcrPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **paraphraseOcrRequest** | [**ParaphraseOcrRequest**](ParaphraseOcrRequest.md)| String in body of request, containing JSON with parameters for rewriting. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
@@ -262,6 +348,7 @@ No authorization required
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -269,6 +356,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     String format = "Unknown"; // String | 
@@ -298,7 +389,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -322,6 +413,7 @@ Rewrite text
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -329,6 +421,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     ParaphraseTextRequest paraphraseTextRequest = new ParaphraseTextRequest(); // ParaphraseTextRequest | String in body of request, containing JSON with parameters for rewriting.
@@ -358,7 +454,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -382,6 +478,7 @@ Return text rewriting status.  Also return rewritten text if paraphrasing was su
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -389,6 +486,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     String requestId = "requestId_example"; // String | GUID which got from /v3/rewriter/text response
@@ -418,7 +519,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -442,6 +543,7 @@ Trial rewrite text
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.ParaphraseApi;
 
@@ -449,6 +551,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
     ParaphraseTextRequest paraphraseTextRequest = new ParaphraseTextRequest(); // ParaphraseTextRequest | String in body of request, containing JSON with parameters for summarizing. Maximum 1000 characters
@@ -478,7 +584,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 

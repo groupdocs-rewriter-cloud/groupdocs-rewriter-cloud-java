@@ -7,11 +7,11 @@
 
 * `CONTINUE` (value: `"Continue"`)
 
-* `SWITCHINGPROTOCOLS` (value: `"SwitchingProtocols"`)
+* `SWITCHING_PROTOCOLS` (value: `"SwitchingProtocols"`)
 
 * `PROCESSING` (value: `"Processing"`)
 
-* `EARLYHINTS` (value: `"EarlyHints"`)
+* `EARLY_HINTS` (value: `"EarlyHints"`)
 
 * `OK` (value: `"OK"`)
 
@@ -19,113 +19,113 @@
 
 * `ACCEPTED` (value: `"Accepted"`)
 
-* `NONAUTHORITATIVEINFORMATION` (value: `"NonAuthoritativeInformation"`)
+* `NON_AUTHORITATIVE_INFORMATION` (value: `"NonAuthoritativeInformation"`)
 
-* `NOCONTENT` (value: `"NoContent"`)
+* `NO_CONTENT` (value: `"NoContent"`)
 
-* `RESETCONTENT` (value: `"ResetContent"`)
+* `RESET_CONTENT` (value: `"ResetContent"`)
 
-* `PARTIALCONTENT` (value: `"PartialContent"`)
+* `PARTIAL_CONTENT` (value: `"PartialContent"`)
 
-* `MULTISTATUS` (value: `"MultiStatus"`)
+* `MULTI_STATUS` (value: `"MultiStatus"`)
 
-* `ALREADYREPORTED` (value: `"AlreadyReported"`)
+* `ALREADY_REPORTED` (value: `"AlreadyReported"`)
 
-* `IMUSED` (value: `"IMUsed"`)
+* `IM_USED` (value: `"IMUsed"`)
 
-* `MULTIPLECHOICES` (value: `"MultipleChoices"`)
+* `MULTIPLE_CHOICES` (value: `"MultipleChoices"`)
 
-* `MOVEDPERMANENTLY` (value: `"MovedPermanently"`)
+* `MOVED_PERMANENTLY` (value: `"MovedPermanently"`)
 
 * `FOUND` (value: `"Found"`)
 
-* `SEEOTHER` (value: `"SeeOther"`)
+* `SEE_OTHER` (value: `"SeeOther"`)
 
-* `NOTMODIFIED` (value: `"NotModified"`)
+* `NOT_MODIFIED` (value: `"NotModified"`)
 
-* `USEPROXY` (value: `"UseProxy"`)
+* `USE_PROXY` (value: `"UseProxy"`)
 
 * `UNUSED` (value: `"Unused"`)
 
-* `TEMPORARYREDIRECT` (value: `"TemporaryRedirect"`)
+* `TEMPORARY_REDIRECT` (value: `"TemporaryRedirect"`)
 
-* `PERMANENTREDIRECT` (value: `"PermanentRedirect"`)
+* `PERMANENT_REDIRECT` (value: `"PermanentRedirect"`)
 
-* `BADREQUEST` (value: `"BadRequest"`)
+* `BAD_REQUEST` (value: `"BadRequest"`)
 
 * `UNAUTHORIZED` (value: `"Unauthorized"`)
 
-* `PAYMENTREQUIRED` (value: `"PaymentRequired"`)
+* `PAYMENT_REQUIRED` (value: `"PaymentRequired"`)
 
 * `FORBIDDEN` (value: `"Forbidden"`)
 
-* `NOTFOUND` (value: `"NotFound"`)
+* `NOT_FOUND` (value: `"NotFound"`)
 
-* `METHODNOTALLOWED` (value: `"MethodNotAllowed"`)
+* `METHOD_NOT_ALLOWED` (value: `"MethodNotAllowed"`)
 
-* `NOTACCEPTABLE` (value: `"NotAcceptable"`)
+* `NOT_ACCEPTABLE` (value: `"NotAcceptable"`)
 
-* `PROXYAUTHENTICATIONREQUIRED` (value: `"ProxyAuthenticationRequired"`)
+* `PROXY_AUTHENTICATION_REQUIRED` (value: `"ProxyAuthenticationRequired"`)
 
-* `REQUESTTIMEOUT` (value: `"RequestTimeout"`)
+* `REQUEST_TIMEOUT` (value: `"RequestTimeout"`)
 
 * `CONFLICT` (value: `"Conflict"`)
 
 * `GONE` (value: `"Gone"`)
 
-* `LENGTHREQUIRED` (value: `"LengthRequired"`)
+* `LENGTH_REQUIRED` (value: `"LengthRequired"`)
 
-* `PRECONDITIONFAILED` (value: `"PreconditionFailed"`)
+* `PRECONDITION_FAILED` (value: `"PreconditionFailed"`)
 
-* `REQUESTENTITYTOOLARGE` (value: `"RequestEntityTooLarge"`)
+* `REQUEST_ENTITY_TOO_LARGE` (value: `"RequestEntityTooLarge"`)
 
-* `REQUESTURITOOLONG` (value: `"RequestUriTooLong"`)
+* `REQUEST_URI_TOO_LONG` (value: `"RequestUriTooLong"`)
 
-* `UNSUPPORTEDMEDIATYPE` (value: `"UnsupportedMediaType"`)
+* `UNSUPPORTED_MEDIA_TYPE` (value: `"UnsupportedMediaType"`)
 
-* `REQUESTEDRANGENOTSATISFIABLE` (value: `"RequestedRangeNotSatisfiable"`)
+* `REQUESTED_RANGE_NOT_SATISFIABLE` (value: `"RequestedRangeNotSatisfiable"`)
 
-* `EXPECTATIONFAILED` (value: `"ExpectationFailed"`)
+* `EXPECTATION_FAILED` (value: `"ExpectationFailed"`)
 
-* `MISDIRECTEDREQUEST` (value: `"MisdirectedRequest"`)
+* `MISDIRECTED_REQUEST` (value: `"MisdirectedRequest"`)
 
-* `UNPROCESSABLEENTITY` (value: `"UnprocessableEntity"`)
+* `UNPROCESSABLE_ENTITY` (value: `"UnprocessableEntity"`)
 
 * `LOCKED` (value: `"Locked"`)
 
-* `FAILEDDEPENDENCY` (value: `"FailedDependency"`)
+* `FAILED_DEPENDENCY` (value: `"FailedDependency"`)
 
-* `UPGRADEREQUIRED` (value: `"UpgradeRequired"`)
+* `UPGRADE_REQUIRED` (value: `"UpgradeRequired"`)
 
-* `PRECONDITIONREQUIRED` (value: `"PreconditionRequired"`)
+* `PRECONDITION_REQUIRED` (value: `"PreconditionRequired"`)
 
-* `TOOMANYREQUESTS` (value: `"TooManyRequests"`)
+* `TOO_MANY_REQUESTS` (value: `"TooManyRequests"`)
 
-* `REQUESTHEADERFIELDSTOOLARGE` (value: `"RequestHeaderFieldsTooLarge"`)
+* `REQUEST_HEADER_FIELDS_TOO_LARGE` (value: `"RequestHeaderFieldsTooLarge"`)
 
-* `UNAVAILABLEFORLEGALREASONS` (value: `"UnavailableForLegalReasons"`)
+* `UNAVAILABLE_FOR_LEGAL_REASONS` (value: `"UnavailableForLegalReasons"`)
 
-* `INTERNALSERVERERROR` (value: `"InternalServerError"`)
+* `INTERNAL_SERVER_ERROR` (value: `"InternalServerError"`)
 
-* `NOTIMPLEMENTED` (value: `"NotImplemented"`)
+* `NOT_IMPLEMENTED` (value: `"NotImplemented"`)
 
-* `BADGATEWAY` (value: `"BadGateway"`)
+* `BAD_GATEWAY` (value: `"BadGateway"`)
 
-* `SERVICEUNAVAILABLE` (value: `"ServiceUnavailable"`)
+* `SERVICE_UNAVAILABLE` (value: `"ServiceUnavailable"`)
 
-* `GATEWAYTIMEOUT` (value: `"GatewayTimeout"`)
+* `GATEWAY_TIMEOUT` (value: `"GatewayTimeout"`)
 
-* `HTTPVERSIONNOTSUPPORTED` (value: `"HttpVersionNotSupported"`)
+* `HTTP_VERSION_NOT_SUPPORTED` (value: `"HttpVersionNotSupported"`)
 
-* `VARIANTALSONEGOTIATES` (value: `"VariantAlsoNegotiates"`)
+* `VARIANT_ALSO_NEGOTIATES` (value: `"VariantAlsoNegotiates"`)
 
-* `INSUFFICIENTSTORAGE` (value: `"InsufficientStorage"`)
+* `INSUFFICIENT_STORAGE` (value: `"InsufficientStorage"`)
 
-* `LOOPDETECTED` (value: `"LoopDetected"`)
+* `LOOP_DETECTED` (value: `"LoopDetected"`)
 
-* `NOTEXTENDED` (value: `"NotExtended"`)
+* `NOT_EXTENDED` (value: `"NotExtended"`)
 
-* `NETWORKAUTHENTICATIONREQUIRED` (value: `"NetworkAuthenticationRequired"`)
+* `NETWORK_AUTHENTICATION_REQUIRED` (value: `"NetworkAuthenticationRequired"`)
 
 
 

@@ -8,6 +8,8 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/rewriter*
 | [**summarizeDocumentRequestIdGet**](SummarizeApi.md#summarizeDocumentRequestIdGet) | **GET** /summarize/document/{requestId} | Return document summarizing status.  Also return URLs for downloading of summarized document if summarization was successful |
 | [**summarizeDocumentTrialPost**](SummarizeApi.md#summarizeDocumentTrialPost) | **POST** /summarize/document/trial | Trial summarize document |
 | [**summarizeHcGet**](SummarizeApi.md#summarizeHcGet) | **GET** /summarize/hc | Health check for all summarize services. |
+| [**summarizeMediaPost**](SummarizeApi.md#summarizeMediaPost) | **POST** /summarize/media | Summarize media file |
+| [**summarizeOcrPost**](SummarizeApi.md#summarizeOcrPost) | **POST** /summarize/ocr | Summarize image or scanned PDF |
 | [**summarizeSupportedConversionsGet**](SummarizeApi.md#summarizeSupportedConversionsGet) | **GET** /summarize/supportedConversions |  |
 | [**summarizeTextPost**](SummarizeApi.md#summarizeTextPost) | **POST** /summarize/text | Summarize text |
 | [**summarizeTextRequestIdGet**](SummarizeApi.md#summarizeTextRequestIdGet) | **GET** /summarize/text/{requestId} | Return text summarizing status status.  Also return rewrote text if translation was successful |
@@ -26,6 +28,7 @@ Summarize document
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -33,6 +36,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     SummarizationFileRequest summarizationFileRequest = new SummarizationFileRequest(); // SummarizationFileRequest | String in body of request, containing JSON with parameters for summarizing.
@@ -62,7 +69,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -86,6 +93,7 @@ Return document summarizing status.  Also return URLs for downloading of summari
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -93,6 +101,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     String requestId = "requestId_example"; // String | GUID which got from /v3/rewriter/document response
@@ -122,7 +134,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -146,6 +158,7 @@ Trial summarize document
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -153,6 +166,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     SummarizationTrialFileRequest summarizationTrialFileRequest = new SummarizationTrialFileRequest(); // SummarizationTrialFileRequest | String in body of request, containing JSON with parameters for summarizing.
@@ -182,7 +199,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -206,6 +223,7 @@ Health check for all summarize services.
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -213,6 +231,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     try {
@@ -238,11 +260,141 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="summarizeMediaPost"></a>
+# **summarizeMediaPost**
+> StatusResponse summarizeMediaPost(summarizationMediaRequest)
+
+Summarize media file
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.SummarizeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    SummarizeApi apiInstance = new SummarizeApi(defaultClient);
+    SummarizationMediaRequest summarizationMediaRequest = new SummarizationMediaRequest(); // SummarizationMediaRequest | String in body of request, containing JSON with parameters for summarizing.
+    try {
+      StatusResponse result = apiInstance.summarizeMediaPost(summarizationMediaRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SummarizeApi#summarizeMediaPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **summarizationMediaRequest** | [**SummarizationMediaRequest**](SummarizationMediaRequest.md)| String in body of request, containing JSON with parameters for summarizing. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="summarizeOcrPost"></a>
+# **summarizeOcrPost**
+> StatusResponse summarizeOcrPost(summarizationOcrRequest)
+
+Summarize image or scanned PDF
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.SummarizeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    SummarizeApi apiInstance = new SummarizeApi(defaultClient);
+    SummarizationOcrRequest summarizationOcrRequest = new SummarizationOcrRequest(); // SummarizationOcrRequest | String in body of request, containing JSON with parameters for summarizing.
+    try {
+      StatusResponse result = apiInstance.summarizeOcrPost(summarizationOcrRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SummarizeApi#summarizeOcrPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **summarizationOcrRequest** | [**SummarizationOcrRequest**](SummarizationOcrRequest.md)| String in body of request, containing JSON with parameters for summarizing. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
@@ -262,6 +414,7 @@ No authorization required
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -269,6 +422,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     String format = "Unknown"; // String | 
@@ -298,7 +455,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -322,6 +479,7 @@ Summarize text
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -329,6 +487,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     SummarizationTextRequest summarizationTextRequest = new SummarizationTextRequest(); // SummarizationTextRequest | 
@@ -358,7 +520,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -382,6 +544,7 @@ Return text summarizing status status.  Also return rewrote text if translation 
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -389,6 +552,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     String requestId = "requestId_example"; // String | GUID which got from /v3/rewriter/text response
@@ -418,7 +585,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 
@@ -442,6 +609,7 @@ Trial summarize text
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.SummarizeApi;
 
@@ -449,6 +617,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     SummarizeApi apiInstance = new SummarizeApi(defaultClient);
     SummarizationTextRequest summarizationTextRequest = new SummarizationTextRequest(); // SummarizationTextRequest | String in body of request, containing JSON with parameters for summarizing. Maximum 1000 characters
@@ -478,7 +650,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 

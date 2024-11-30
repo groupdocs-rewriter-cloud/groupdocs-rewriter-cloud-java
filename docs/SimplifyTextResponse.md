@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**status** | **HttpStatusCode** |  |  [optional] |
 |**message** | **String** | Information about process |  [optional] |
-|**simplifyReult** | **String** |  |  [optional] |
+|**simplifyResult** | **String** |  |  [optional] |
 |**simplifyResults** | **List&lt;String&gt;** |  |  [optional] |
 
 

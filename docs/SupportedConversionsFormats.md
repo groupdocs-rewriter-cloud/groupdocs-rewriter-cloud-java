@@ -27,7 +27,5 @@
 
 * `PPTX` (value: `"Pptx"`)
 
-* `GIT` (value: `"Git"`)
-
 
 
