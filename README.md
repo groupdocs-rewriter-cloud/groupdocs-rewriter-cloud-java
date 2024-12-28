@@ -4,18 +4,23 @@
 
 [Product Page](https://products.groupdocs.cloud/rewriter/java/) | [Documentation](https://docs.groupdocs.cloud/rewriter/) | [Demos](https://products.groupdocs.app/rewriter/family) | [Swagger UI](https://reference.groupdocs.cloud/rewriter/) | [Examples](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/rewriter/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/rewriter) | [Free Trial](https://purchase.groupdocs.cloud/trial)
 
-GroupDocs.Rewriter Cloud SDK for Java is a simple Python SDK that enables your cloud Apps to perform paraphrasing, simplification, summarization and paraphrasing detection of Microsoft Word®, OpenOffice, Markdown, HTML, Adobe Acrobat® PDF documents, audio and video files as well as plain text by adding just a few lines of code.
+GroupDocs.Rewriter Cloud SDK for Java is a simple Python SDK that enables your cloud Apps to perform paraphrasing, simplification, summarization and paraphrasing detection of Microsoft Word®, Microsoft PowerPoint®, OpenOffice, Markdown, HTML, Adobe Acrobat® PDF documents, images and scanned documents, audio and video files as well as plain text by adding just a few lines of code.
 
-In other words, it's a SDK for document and plain text rewriting, summarization, etc. in our Cloud, that supports paraphrasing of .doc, .docx, .docm, .pdf, .rtf, .odt, .md, .html, .txt files. Just pass a specific file or text to the GroupDocs.Rewriter Cloud API, and it will process and save result in our Cloud or will return resulting text.
+In other words, it's a SDK for document and plain text rewriting, summarization, etc. in our Cloud, that supports paraphrasing of .doc, .docx, .docm, .pdf, .rtf, .odt, .md, .html, .txt and many other file types. Just pass a specific file or text to the GroupDocs.Rewriter Cloud API, and it will process and save result in our Cloud or will return resulting text.
 
 It is easy to get started with GroupDocs.Rewriter Cloud and there is nothing to install. Create an account at GroupDocs Cloud and get your application information, then you are ready to use SDKs.
 
 ## Cloud Features
 
 - Paraphrasing / summarization / simplification / paraphrase detection of documents
+- Paraphrasing / summarization / simplification / paraphrase detection of images and scans
 - Paraphrasing / summarization / simplification / paraphrase detection / comparison of plain text
 - Summarization of audio and video files
+- eBooks summarization
 - Words and idioms synonyms finder
+- Texts comparison to detect if one text is paraphrase or translation of another
+- AI generated texts detection
+- Generation of cover letters and text exercises
 - Return resulting text in response
 - Save processed file in cloud
 - No need to install any 3rd party software
@@ -25,9 +30,13 @@ It is easy to get started with GroupDocs.Rewriter Cloud and there is nothing to 
 You can specify format of document to process putting in the request’s body:
 
 - **Microsoft Word®:** DOC, DOCX, DOCM
+- **Microsoft Word®:** PPT, PPTX, PPTM
 - **Adobe®:** PDF
 - **Markdown:** MD
 - **HTML:** HTML
+- **Audio / Video:** MP3, WAV, FLAC, M4A, AAC, WMA, FLV, MKV, WEBM, AVI,  MOV, WMV, RM, MPG
+- **Images:** BMP, JPG, PNG, SVG, GIF
+- **eBooks:** EPUB, MOBI, AZW3
 - **Other:** RTF, ODT, TXT
 
 Additionally, user could obtain processed file in any other format available for conversion. Just specify output format of paraphrased document by putting file extension in the request’s body:
@@ -52,7 +61,9 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/rewriter/supported
 - **ru** — to process Russian text or document
 - **sk** — to process Slovak text or document
 - **th** — to process Thai text or document
+- **tr** — to process Turkish text or document
 - **uk** — to process Ukrainian text or document
+- **zh** — to process Chinese text or document
 
 ## How to use the SDK?
 
@@ -88,7 +99,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.groupdocs</groupId>
   <artifactId>GroupDocs-rewriter-cloud</artifactId>
-  <version>24.11</version>
+  <version>24.12</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -104,7 +115,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-rewriter-cloud:24.11"
+     implementation "com.groupdocs:GroupDocs-rewriter-cloud:24.12"
   }
 ```
 
@@ -118,7 +129,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-rewriter-cloud-24.11.jar`
+* `target/GroupDocs-rewriter-cloud-24.12.jar`
 * `target/lib/*.jar`
 
 ## Quickstart
@@ -328,3 +339,4 @@ Class | Method | HTTP request | Description
 ---
 
 [Product Page](https://products.groupdocs.cloud/rewriter/java/) | [Docs](https://docs.groupdocs.cloud/rewriter/) | [Demos](https://products.groupdocs.app/rewriter/family) | [Swagger UI](https://apireference.groupdocs.cloud/rewriter/) | [Examples](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/rewriter/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/rewriter) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+
