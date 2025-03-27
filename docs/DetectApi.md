@@ -8,6 +8,7 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/rewriter*
 | [**detectDocumentRequestIdGet**](DetectApi.md#detectDocumentRequestIdGet) | **GET** /detect/document/{requestId} | Return document detection status.  Also return probability of paraphrasing for the whole document and per paragraph |
 | [**detectDocumentTrialPost**](DetectApi.md#detectDocumentTrialPost) | **POST** /detect/document/trial | Trial detect paraphrasing in the document |
 | [**detectHcGet**](DetectApi.md#detectHcGet) | **GET** /detect/hc | Health check for detect all services. |
+| [**detectOcrAiGenerationPost**](DetectApi.md#detectOcrAiGenerationPost) | **POST** /detect/ocr-ai-generation | Detect ai generation content in the image or scanned document |
 | [**detectOcrPost**](DetectApi.md#detectOcrPost) | **POST** /detect/ocr | Obsolete. Will be removed in the next version, use /detect/paraphrase/ocr instead this. |
 | [**detectParaphraseDocumentPost**](DetectApi.md#detectParaphraseDocumentPost) | **POST** /detect/paraphrase/document | Detect paraphrasing in the document |
 | [**detectParaphraseOcrPost**](DetectApi.md#detectParaphraseOcrPost) | **POST** /detect/paraphrase/ocr | Detect paraphrasing in the image or scanned document |
@@ -15,6 +16,7 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/rewriter*
 | [**detectSummarizationDocumentPost**](DetectApi.md#detectSummarizationDocumentPost) | **POST** /detect/summarization/document | Detect summarization in the document |
 | [**detectSummarizationOcrPost**](DetectApi.md#detectSummarizationOcrPost) | **POST** /detect/summarization/ocr | Detect summarization in the image or scanned document |
 | [**detectSummarizationTextPost**](DetectApi.md#detectSummarizationTextPost) | **POST** /detect/summarization/text | Detect summarization in text |
+| [**detectTextAiGenerationPost**](DetectApi.md#detectTextAiGenerationPost) | **POST** /detect/text/ai-generation | Detect ai generated text |
 | [**detectTextPost**](DetectApi.md#detectTextPost) | **POST** /detect/text | Obsolete. Will be removed in the next version, use /detect/paraphrase/text instead this. |
 | [**detectTextRequestIdGet**](DetectApi.md#detectTextRequestIdGet) | **GET** /detect/text/{requestId} | Return text detection status.  Also return probability of paraphrasing for the whole text |
 | [**detectTextTrialPost**](DetectApi.md#detectTextTrialPost) | **POST** /detect/text/trial | Trial detect paraphrasing in text |
@@ -269,6 +271,71 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="detectOcrAiGenerationPost"></a>
+# **detectOcrAiGenerationPost**
+> StatusResponse detectOcrAiGenerationPost(detectionOcrRequest)
+
+Detect ai generation content in the image or scanned document
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.DetectApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    DetectApi apiInstance = new DetectApi(defaultClient);
+    DetectionOcrRequest detectionOcrRequest = new DetectionOcrRequest(); // DetectionOcrRequest | String in body of request, containing JSON with parameters for detecting.
+    try {
+      StatusResponse result = apiInstance.detectOcrAiGenerationPost(detectionOcrRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DetectApi#detectOcrAiGenerationPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **detectionOcrRequest** | [**DetectionOcrRequest**](DetectionOcrRequest.md)| String in body of request, containing JSON with parameters for detecting. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
@@ -698,6 +765,71 @@ public class Example {
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DetectApi#detectSummarizationTextPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **detectionTextRequest** | [**DetectionTextRequest**](DetectionTextRequest.md)| String in body of request, containing JSON with parameters for detection. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="detectTextAiGenerationPost"></a>
+# **detectTextAiGenerationPost**
+> StatusResponse detectTextAiGenerationPost(detectionTextRequest)
+
+Detect ai generated text
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.DetectApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    DetectApi apiInstance = new DetectApi(defaultClient);
+    DetectionTextRequest detectionTextRequest = new DetectionTextRequest(); // DetectionTextRequest | String in body of request, containing JSON with parameters for detection.
+    try {
+      StatusResponse result = apiInstance.detectTextAiGenerationPost(detectionTextRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DetectApi#detectTextAiGenerationPost");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

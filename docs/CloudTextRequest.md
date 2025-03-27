@@ -11,6 +11,9 @@
 |**handler** | **String** | Defines handler in cloud service |  [optional] |
 |**text** | **String** | Text to rewrite |  [optional] |
 |**action** | **String** | Rewrite or summarize |  [optional] |
+|**jobofferurl** | **String** | Link to job offer |  [optional] |
+|**cvurl** | **String** | Link to candidates CV |  [optional] |
+|**coverletterurl** | **String** | Link to candidates cover letter |  [optional] |
 |**texts** | **List&lt;String&gt;** | Text array to rewrite |  [optional] |
 |**suggestions** | **Integer** | Number of suggested variants, 3 maximum |  [optional] |
 |**diversity** | **Integer** | Diversity of text |  [optional] |

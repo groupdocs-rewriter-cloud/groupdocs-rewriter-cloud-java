@@ -16,7 +16,7 @@ public class Demo {
 
         // Upload file
         FileApi fileApi = new FileApi(defaultClient);
-        String fileName = "file_name";
+        String fileName = "FILE_NAME";
         File fileToUpload = new File(fileName);
         String file_url = null;
 
@@ -51,6 +51,7 @@ public class Demo {
                 if (!response.getStatus().toString().equals("500")) {
                     while (true) {
                         ParaphraseFileResponse paraphraseResponse = apiInstance.paraphraseDocumentRequestIdGet(response_id);
+                        System.out.println(paraphraseResponse);
                         if (paraphraseResponse.getStatus().toString().equals("200") || paraphraseResponse.getStatus().toString().equals("OK")) {
                             System.out.println(paraphraseResponse);
                             break;

@@ -4,7 +4,7 @@
 
 [Product Page](https://products.groupdocs.cloud/rewriter/java/) | [Documentation](https://docs.groupdocs.cloud/rewriter/) | [Demos](https://products.groupdocs.app/rewriter/family) | [Swagger UI](https://reference.groupdocs.cloud/rewriter/) | [Examples](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/rewriter/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/rewriter) | [Free Trial](https://purchase.groupdocs.cloud/trial)
 
-GroupDocs.Rewriter Cloud SDK for Java is a simple Python SDK that enables your cloud Apps to perform paraphrasing, simplification, summarization and paraphrasing detection of Microsoft Word®, Microsoft PowerPoint®, OpenOffice, Markdown, HTML, Adobe Acrobat® PDF documents, images and scanned documents, audio and video files as well as plain text by adding just a few lines of code.
+GroupDocs.Rewriter Cloud SDK for Java is a simple Java SDK that enables your cloud Apps to perform paraphrasing, simplification, summarization, comparison,  formalization, synonymization and detection of paraphrased, summarized and AI generated content in documents of different formats, images and scans, audio and video files as well as plain text by adding just a few lines of code.
 
 In other words, it's a SDK for document and plain text rewriting, summarization, etc. in our Cloud, that supports paraphrasing of .doc, .docx, .docm, .pdf, .rtf, .odt, .md, .html, .txt and many other file types. Just pass a specific file or text to the GroupDocs.Rewriter Cloud API, and it will process and save result in our Cloud or will return resulting text.
 
@@ -99,7 +99,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.groupdocs</groupId>
   <artifactId>GroupDocs-rewriter-cloud</artifactId>
-  <version>24.12</version>
+  <version>25.3</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -115,7 +115,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-rewriter-cloud:24.12"
+     implementation "com.groupdocs:GroupDocs-rewriter-cloud:25.3"
   }
 ```
 
@@ -129,7 +129,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-rewriter-cloud-24.12.jar`
+* `target/GroupDocs-rewriter-cloud-25.3.jar`
 * `target/lib/*.jar`
 
 ## Quickstart
@@ -212,6 +212,7 @@ Class | Method | HTTP request | Description
 *DetectApi* | [**detectDocumentRequestIdGet**](docs/DetectApi.md#detectDocumentRequestIdGet) | **GET** /detect/document/{requestId} | Return document detection status.  Also return probability of paraphrasing for the whole document and per paragraph
 *DetectApi* | [**detectDocumentTrialPost**](docs/DetectApi.md#detectDocumentTrialPost) | **POST** /detect/document/trial | Trial detect paraphrasing in the document
 *DetectApi* | [**detectHcGet**](docs/DetectApi.md#detectHcGet) | **GET** /detect/hc | Health check for detect all services.
+*DetectApi* | [**detectOcrAiGenerationPost**](docs/DetectApi.md#detectOcrAiGenerationPost) | **POST** /detect/ocr-ai-generation | Detect ai generation content in the image or scanned document
 *DetectApi* | [**detectOcrPost**](docs/DetectApi.md#detectOcrPost) | **POST** /detect/ocr | Obsolete. Will be removed in the next version, use /detect/paraphrase/ocr instead this.
 *DetectApi* | [**detectParaphraseDocumentPost**](docs/DetectApi.md#detectParaphraseDocumentPost) | **POST** /detect/paraphrase/document | Detect paraphrasing in the document
 *DetectApi* | [**detectParaphraseOcrPost**](docs/DetectApi.md#detectParaphraseOcrPost) | **POST** /detect/paraphrase/ocr | Detect paraphrasing in the image or scanned document
@@ -219,6 +220,7 @@ Class | Method | HTTP request | Description
 *DetectApi* | [**detectSummarizationDocumentPost**](docs/DetectApi.md#detectSummarizationDocumentPost) | **POST** /detect/summarization/document | Detect summarization in the document
 *DetectApi* | [**detectSummarizationOcrPost**](docs/DetectApi.md#detectSummarizationOcrPost) | **POST** /detect/summarization/ocr | Detect summarization in the image or scanned document
 *DetectApi* | [**detectSummarizationTextPost**](docs/DetectApi.md#detectSummarizationTextPost) | **POST** /detect/summarization/text | Detect summarization in text
+*DetectApi* | [**detectTextAiGenerationPost**](docs/DetectApi.md#detectTextAiGenerationPost) | **POST** /detect/text/ai-generation | Detect ai generated text
 *DetectApi* | [**detectTextPost**](docs/DetectApi.md#detectTextPost) | **POST** /detect/text | Obsolete. Will be removed in the next version, use /detect/paraphrase/text instead this.
 *DetectApi* | [**detectTextRequestIdGet**](docs/DetectApi.md#detectTextRequestIdGet) | **GET** /detect/text/{requestId} | Return text detection status.  Also return probability of paraphrasing for the whole text
 *DetectApi* | [**detectTextTrialPost**](docs/DetectApi.md#detectTextTrialPost) | **POST** /detect/text/trial | Trial detect paraphrasing in text
@@ -230,6 +232,11 @@ Class | Method | HTTP request | Description
 *FormalizeApi* | [**formalizeSupportedConversionsGet**](docs/FormalizeApi.md#formalizeSupportedConversionsGet) | **GET** /formalize/supportedConversions | 
 *FormalizeApi* | [**formalizeTextPost**](docs/FormalizeApi.md#formalizeTextPost) | **POST** /formalize/text | Formalize text
 *FormalizeApi* | [**formalizeTextRequestIdGet**](docs/FormalizeApi.md#formalizeTextRequestIdGet) | **GET** /formalize/text/{requestId} | Return text formalizing status.  Also return formalized text if paraphrasing was successful
+*GenerateApi* | [**generateCoverLetterPost**](docs/GenerateApi.md#generateCoverLetterPost) | **POST** /generate/cover-letter | Generate cover letter based on job description and optionally CV and cover letter that should be adopted to this offer
+*GenerateApi* | [**generateHcGet**](docs/GenerateApi.md#generateHcGet) | **GET** /generate/hc | Health check for generation services.
+*GenerateApi* | [**generateRequestIdGet**](docs/GenerateApi.md#generateRequestIdGet) | **GET** /generate/{requestId} | Return generation status.  Also return generated result
+*GenerateApi* | [**generateTestExercisePost**](docs/GenerateApi.md#generateTestExercisePost) | **POST** /generate/test-exercise | Generate test exercise based on job description and optionally CV
+*GenerateApi* | [**generateTestQuestionsPost**](docs/GenerateApi.md#generateTestQuestionsPost) | **POST** /generate/test-questions | Generate questions for technical interview based on job description and optionally CV
 *InfoApi* | [**infoAvailableLanguagesGet**](docs/InfoApi.md#infoAvailableLanguagesGet) | **GET** /info/availableLanguages | 
 *ParaphraseApi* | [**paraphraseDocumentPost**](docs/ParaphraseApi.md#paraphraseDocumentPost) | **POST** /paraphrase/document | Paraphrase document
 *ParaphraseApi* | [**paraphraseDocumentRequestIdGet**](docs/ParaphraseApi.md#paraphraseDocumentRequestIdGet) | **GET** /paraphrase/document/{requestId} | Return document rewriting status.  Also return URLs for downloading of rewritten document if paraphrasig was successful
@@ -289,6 +296,8 @@ Class | Method | HTTP request | Description
  - [FormalizeSupportedFromats](docs/FormalizeSupportedFromats.md)
  - [FormalizeTextRequest](docs/FormalizeTextRequest.md)
  - [FormalizeTextResponse](docs/FormalizeTextResponse.md)
+ - [GenerateRequest](docs/GenerateRequest.md)
+ - [GenerateResponse](docs/GenerateResponse.md)
  - [HealthCheckInfo](docs/HealthCheckInfo.md)
  - [HealthCheckResponse](docs/HealthCheckResponse.md)
  - [HttpStatusCode](docs/HttpStatusCode.md)
@@ -331,12 +340,11 @@ Class | Method | HTTP request | Description
 
 ## GroupDocs.Rewriter Cloud SDKs in Popular Languages
 
-| .NET | Python | Java
-|---|---|---|
-| [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-dotnet) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-dotnet) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java)
+| .NET | Python | Java | Go
+|---|---|---|---|
+| [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-dotnet) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-python) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-go)
 | [NuGet](https://www.nuget.org/packages/GroupDocs.Rewriter-Cloud/) | [PyPi](https://pypi.org/project/groupdocs-rewriter-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-rewriter-cloud)
 
 ---
 
 [Product Page](https://products.groupdocs.cloud/rewriter/java/) | [Docs](https://docs.groupdocs.cloud/rewriter/) | [Demos](https://products.groupdocs.app/rewriter/family) | [Swagger UI](https://apireference.groupdocs.cloud/rewriter/) | [Examples](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/rewriter/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/rewriter) | [Free Trial](https://purchase.groupdocs.cloud/trial)
-
