@@ -340,9 +340,9 @@ Class | Method | HTTP request | Description
 
 ## GroupDocs.Rewriter Cloud SDKs in Popular Languages
 
-| .NET | Python | Java | Go
-|---|---|---|---|
-| [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-dotnet) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-python) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-go)
+| .NET | Python | Java 
+|---|---|---|
+| [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-dotnet) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-python) | [GitHub](https://github.com/groupdocs-rewriter-cloud/groupdocs-rewriter-cloud-java)
 | [NuGet](https://www.nuget.org/packages/GroupDocs.Rewriter-Cloud/) | [PyPi](https://pypi.org/project/groupdocs-rewriter-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-rewriter-cloud)
 
 ---
