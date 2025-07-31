@@ -11,6 +11,7 @@
 |**text** | **String** | Single text paragraph |  [optional] |
 |**texts** | **List&lt;String&gt;** | Text paragraphs |  [optional] |
 |**origin** | **String** | Information about SDK user, like a User-Agent |  [optional] |
+|**detectLanguage** | **Boolean** | If language should be auto detected |  [optional] |
 |**summarizationDegree** | **DegreeEnum** |  |  [optional] |
 
 

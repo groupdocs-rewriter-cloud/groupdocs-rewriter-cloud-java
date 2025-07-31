@@ -19,6 +19,7 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/rewriter*
 import com.groupdocs.ApiClient;
 import com.groupdocs.ApiException;
 import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
 import com.groupdocs.models.*;
 import org.openapitools.client.api.InfoApi;
 
@@ -26,6 +27,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/rewriter");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     InfoApi apiInstance = new InfoApi(defaultClient);
     try {
@@ -51,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[JWT](../README.md#JWT)
 
 ### HTTP request headers
 

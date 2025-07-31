@@ -15,6 +15,7 @@
 |**outputFormat** | **SupportedConversionsFormats** |  |  |
 |**diversityDegree** | **DegreeEnum** |  |  [optional] |
 |**format** | **ParaphraseSupportedFormats** |  |  [optional] |
+|**detectLanguage** | **Boolean** |  |  [optional] |
 
 
 

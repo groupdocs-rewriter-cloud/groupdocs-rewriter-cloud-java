@@ -13,6 +13,7 @@
 |**originalName** | **String** |  |  [optional] |
 |**savingMode** | **FileSavingMode** |  |  [optional] |
 |**minLength** | **Integer** |  |  [optional] |
+|**detectLanguage** | **Boolean** |  |  [optional] |
 |**format** | **DetectionSupportedFormats** |  |  [optional] |
 
 

@@ -21,5 +21,21 @@
 
 * `PDF` (value: `"Pdf"`)
 
+* `EPUB` (value: `"Epub"`)
+
+* `MOBI` (value: `"Mobi"`)
+
+* `AZW3` (value: `"Azw3"`)
+
+* `PPT` (value: `"Ppt"`)
+
+* `PPTX` (value: `"Pptx"`)
+
+* `PPTM` (value: `"Pptm"`)
+
+* `MD` (value: `"Md"`)
+
+* `HTML` (value: `"Html"`)
+
 
 

@@ -15,6 +15,7 @@
 |**outputFormat** | **SupportedConversionsFormats** |  |  |
 |**summarizationDegree** | **DegreeEnum** |  |  [optional] |
 |**minLength** | **Integer** | Minimum length of the target text |  [optional] |
+|**detectLanguage** | **Boolean** |  |  [optional] |
 |**format** | **SummarizationSupportedFormats** |  |  [optional] |
 
 

@@ -16,12 +16,13 @@ public class Demo {
 
         // Upload file
         FileApi fileApi = new FileApi(defaultClient);
-        String fileName = "FILE_PATH";
+        String fileName = "FILE_NAME";
         File fileToUpload = new File(fileName);
         String file_url = null;
 
         try {
-            file_url = fileApi.fileUploadPost("FILE_FORMAT", fileToUpload);
+            file_url = fileApi.fileUploadPost("pdf", fileToUpload);
+            System.out.println(file_url);
         }
         catch(ApiException e){
             System.err.println("Exception when calling FileApi#fileUploadPost");
@@ -50,7 +51,8 @@ public class Demo {
                 if (!response.getStatus().toString().equals("500")) {
                     while (true) {
                         ParaphraseFileResponse paraphraseResponse = apiInstance.paraphraseDocumentRequestIdGet(response_id);
-                        if (paraphraseResponse.getStatus().toString().equals("200")) {
+                        System.out.println(paraphraseResponse);
+                        if (paraphraseResponse.getStatus().toString().equals("200") || paraphraseResponse.getStatus().toString().equals("OK")) {
                             System.out.println(paraphraseResponse);
                             break;
                         }
