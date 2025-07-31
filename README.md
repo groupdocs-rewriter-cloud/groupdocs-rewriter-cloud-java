@@ -106,7 +106,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.groupdocs</groupId>
   <artifactId>GroupDocs-rewriter-cloud</artifactId>
-  <version>24.7</version>
+  <version>25.7</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -122,7 +122,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-rewriter-cloud:24.7"
+     implementation "com.groupdocs:GroupDocs-rewriter-cloud:25.7"
   }
 ```
 
@@ -136,7 +136,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-rewriter-cloud-24.7.jar`
+* `target/GroupDocs-rewriter-cloud-25.7.jar`
 * `target/lib/*.jar`
 
 ## Quickstart
